@@ -23,11 +23,11 @@ class AMapGeoFenceManager extends NSObject  {
   //endregion
 
   //region creators
-  static Future<AMapGeoFenceManager> create__({ bool init = true /* ios only */ }) async {
+  static Future<AMapGeoFenceManager?> create__({ bool init = true /* ios only */ }) async {
     return kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createAMapGeoFenceManager', {'init': init});
   }
   
-  static Future<List<AMapGeoFenceManager>> create_batch__(int length, { bool init = true /* ios only */ }) async {
+  static Future<List<AMapGeoFenceManager>?> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -99,7 +99,7 @@ class AMapGeoFenceManager extends NSObject  {
               break;
           }
         } catch (e) {
-          debugPrint(e);
+          debugPrint(e.toString());
           rethrow;
         }
       });
@@ -354,7 +354,7 @@ class AMapGeoFenceManager extends NSObject  {
   }
   
   
-  Future<void> removeTheGeoFenceRegion(AMapGeoFenceRegion region) async {
+  Future<void> removeTheGeoFenceRegion(AMapGeoFenceRegion? region) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::removeTheGeoFenceRegion([])');

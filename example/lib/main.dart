@@ -17,8 +17,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Location _location;
-  String _fenceStatus;
+  Location? _location;
+  String? _fenceStatus;
 
   @override
   Widget build(BuildContext context) {
